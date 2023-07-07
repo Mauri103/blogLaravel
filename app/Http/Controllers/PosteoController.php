@@ -13,15 +13,12 @@ class PosteoController extends Controller
         $u -> posteo = $request -> post("posteo");
         $u -> save();
 
-        return redirect("/autorizado");
+        return redirect("/inicio");
 
     }
 
-    public function Listar(Request $request){
-
-        return Posteo::all();
-     
-
+    public static function Listar(){
+        return $Posteo = Posteo::all();
     }
 
     

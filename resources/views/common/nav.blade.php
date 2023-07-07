@@ -12,7 +12,11 @@
         <nav class="navbar bg-body-tertiary">
             <form class="container-fluid justify-content-between">
                 <div>
+                    @if(!Auth::check())
                     <a href="/"><button class="btn btn-outline-success me-2" type="button">Inicio</button></a>
+                    @else
+                    <a href="/autorizado"><button class="btn btn-outline-success me-2" type="button">Inicio</button></a>
+                    @endif
                 </div>
                 <div>
                     @if(!Auth::check())

@@ -30,8 +30,8 @@ Route::get('/registrarse', function () {
     return view('registrarse');
 });
 
-Route::get('/autorizado', function () {
-    return view('autorizado');
+Route::get('/inicio', function () {
+    return view('inicio');
 })-> middleware(Autenticacion::class);
 
 Route::get('/listar',[PosteoController::class,"Listar"]);

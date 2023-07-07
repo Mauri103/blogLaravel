@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AutenticacionController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,7 @@ Route::get('/login', function () {
 Route::get('/registrarse', function () {
     return view('registrarse');
 });
+
+
+
+Route::post("/registrarse",[AutenticacionController::class,"Registrar"]);

@@ -10,22 +10,24 @@
 </head>
 <body>
     @include('common/nav')
-    <form action="/registrarse" method="post">
-        @csrf
-        <div class="mb-3">
-            <label class="form-label" for="">Nombre</label>
-            <input type="name" class="form-control" name="name" id="">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Password</label>
-            <input type="password" class="form-control" name="password" id="">
-        </div>
+    <div class="container d-flex justify-content-center mt-4">
+        <form action="/registrarse" method="post">
+            @csrf
+            <div class="mb-3">
+                <label class="form-label" for="">Nombre</label>
+                <input type="name" class="form-control" name="name" id="">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="">
+            </div>
 
-        <button type="submit" class="btn btn-outline-success me-2" >Enviar</button>
-    </form>
+            <button type="submit" class="btn btn-outline-success me-2" >Enviar</button>
+        </form>
+    </div>
 </body>
 </html>

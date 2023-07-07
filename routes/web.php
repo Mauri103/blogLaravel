@@ -27,6 +27,12 @@ Route::get('/registrarse', function () {
     return view('registrarse');
 });
 
+Route::get('/autorizado', function () {
+    return view('autorizado');
+});
+
 
 
 Route::post("/registrarse",[AutenticacionController::class,"Registrar"]);
+Route::post("/login",[AutenticacionController::class,"Autenticar"]);
+

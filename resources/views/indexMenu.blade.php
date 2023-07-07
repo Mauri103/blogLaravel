@@ -9,13 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <nav class="navbar bg-body-tertiary">
-            <form class="container-fluid justify-content-start">
-                <a href="/login"><button class="btn btn-outline-success me-2" type="button">Login</button></a>
-                <a href="/registrarse"><button class="btn btn-outline-success me-2" type="button">Registrarse</button></a>
-            </form>
-        </nav>
-    </div>
+    @include('common/nav')
+
 </body>
 </html>

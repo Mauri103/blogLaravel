@@ -21,6 +21,12 @@ class AutenticacionController extends Controller
 
     }
 
+    public function Autenticar(Request $request){
+        $credenciales = $request -> only(["email","password"]);
+        if(!Auth::attempt($credenciales))
+            return redirect("/registrarse")->with("error",true);
+        return redirect("/autorizado");
+    }
    
   
 }

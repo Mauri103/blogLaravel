@@ -10,9 +10,14 @@
 </head>
 <body>
         <nav class="navbar bg-body-tertiary">
-            <form class="container-fluid justify-content-start">
-                <a href="/"><button class="btn btn-outline-success me-2" type="button">Inicio</button></a>
-                <a href="/registrarse"><button class="btn btn-outline-success me-2" type="button">Registrarse</button></a>
+            <form class="container-fluid justify-content-between">
+                <div>
+                    <a href="/"><button class="btn btn-outline-success me-2" type="button">Inicio</button></a>
+                </div>
+                <div>
+                    <a href="/login"><button class="btn btn-outline-success me-2" type="button">Login</button></a>
+                    <a href="/registrarse"><button class="btn btn-outline-success me-2" type="button">Registrarse</button></a>
+                </div>
             </form>
         </nav>
 </body>

@@ -10,5 +10,14 @@
 </head>
 <body>
     @include('common/nav')
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-4">
+                @foreach ($posteos as $posteo)
+                    <h1>{{$posteo->posteo}}</h1>
+                @endforeach
+            </div>
+        </div>
+    </div>
 </body>
 </html>

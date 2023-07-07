@@ -21,5 +21,15 @@ class PosteoController extends Controller
         return $Posteo = Posteo::all();
     }
 
+    public function Home(Request $request){ 
+        $posteos = Posteo::all(); 
+        return view("/indexMenu",["posteos" => $posteos]);
+    }
+
+    public function Autenticado(Request $request){
+        $posteos = Posteo::all(); 
+        return view("/inicio",["posteos" => $posteos]);
+    }
+
     
 }

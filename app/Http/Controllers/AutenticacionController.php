@@ -23,10 +23,10 @@ class AutenticacionController extends Controller
 
     public function Autenticar(Request $request){
         $credenciales = $request -> only(["email","password"]);
-        if(!Auth::attempt($credenciales))
-            return redirect("/login")->with("error",true);
+        if(Auth::attempt($credenciales))
+            return redirect("/inicio");
         else{
-            return view("/inicio");
+            return view("/login");
         }
         
     }
@@ -36,5 +36,6 @@ class AutenticacionController extends Controller
         return redirect("/");
     }
    
+    
   
 }

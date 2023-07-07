@@ -18,9 +18,8 @@ use App\Http\Middleware\Autenticacion;
 |
 */
 
-Route::get('/', function () {
-    return view('indexMenu');
-});
+Route::get("/",[PosteoController::class,"Home"]);
+
 
 Route::get('/login', function () {
     return view('login');
@@ -30,11 +29,8 @@ Route::get('/registrarse', function () {
     return view('registrarse');
 });
 
-Route::get('/inicio', function () {
-    return view('inicio');
-})-> middleware(Autenticacion::class);
+Route::get("/inicio", [PosteoController::class,"Autenticado"])-> middleware(Autenticacion::class);
 
-Route::get('/listar',[PosteoController::class,"Listar"]);
 
 
 

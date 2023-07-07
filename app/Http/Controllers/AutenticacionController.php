@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AutenticacionController extends Controller
 {
-    public function Registrar(Request $request){
+    public function RegistrarUsuario(Request $request){
         $u = new User();
         $u -> name = $request -> post("name");
         $u -> email = $request -> post("email");
@@ -21,7 +21,7 @@ class AutenticacionController extends Controller
 
     }
 
-    public function Autenticar(Request $request){
+    public function AutenticarUsuario(Request $request){
         $credenciales = $request -> only(["email","password"]);
         if(Auth::attempt($credenciales))
             return redirect("/inicio");
@@ -31,7 +31,7 @@ class AutenticacionController extends Controller
         
     }
 
-    public function Logout(Request $request){
+    public function LogoutUsuario(Request $request){
         Auth::logout();
         return redirect("/");
     }

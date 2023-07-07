@@ -34,8 +34,10 @@ Route::get("/inicio", [PosteoController::class,"Autenticado"])-> middleware(Aute
 
 
 
-Route::post("/registrarse",[AutenticacionController::class,"Registrar"]);
-Route::post("/login",[AutenticacionController::class,"Autenticar"]);
-Route::get("/logout",[AutenticacionController::class,"Logout"])-> middleware(Autenticacion::class);
+Route::post("/registrarse",[AutenticacionController::class,"RegistrarUsuario"]);
+Route::post("/login",[AutenticacionController::class,"AutenticarUsuario"]);
+Route::get("/logout",[AutenticacionController::class,"LogoutUsuario"])-> middleware(Autenticacion::class);
 Route::post("/posteo",[PosteoController::class,"AgregarPosteo"])-> middleware(Autenticacion::class);
+Route::delete('/eliminar{posteo}', [PosteoController::class, 'eliminarPosteo'])->name('posteo.destroy');
+
 

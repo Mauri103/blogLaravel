@@ -15,7 +15,7 @@
                     @if(!Auth::check())
                     <a href="/"><button class="btn btn-outline-success me-2" type="button">Inicio</button></a>
                     @else
-                    <a href="/autorizado"><button class="btn btn-outline-success me-2" type="button">Inicio</button></a>
+                    <a href="/inicio"><button class="btn btn-outline-success me-2" type="button">Inicio</button></a>
                     @endif
                 </div>
                 <div>

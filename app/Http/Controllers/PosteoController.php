@@ -17,8 +17,10 @@ class PosteoController extends Controller
 
     }
 
-    public static function Listar(){
-        return $Posteo = Posteo::all();
+    public function eliminarPosteo(Posteo $posteo){
+       
+        $posteo->delete();
+        return redirect("/inicio");
     }
 
     public function Home(Request $request){ 

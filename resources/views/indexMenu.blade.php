@@ -16,17 +16,18 @@
     @foreach ($posteos as $posteo)
     <div class="d-flex justify-content-center">
         <div class="container m-2 card ">
-             <div class="card-body">
+             <div class="card-body ">
                 {{$posteo->posteo}}
             </div>
         </div>
     </div>
     @endforeach
-    
-
-    <div class="d-flex justify-content-end m-5">
-        {!! $posteos->links() !!}
+    <div class="container">
+        <div class="d-flex justify-content-end m-5">
+            {!! $posteos->links() !!}
+        </div>
     </div>
+    
    
 </body>
 </html>

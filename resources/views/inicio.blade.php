@@ -26,16 +26,24 @@
         @foreach ($posteos as $posteo)
         <div class="d-flex justify-content-center mt-4">
             <div class="container m-2 card ">
-                <div class="card-body">
+                <div class="card-body d-flex justify-content-between">
                     {{$posteo->posteo}}
+                    <form action="{{ route('posteo.destroy', $posteo) }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <button class="btn btn-danger" type="submit">Eliminar</button>
+                    </form>
                 </div>
             </div>
         </div>
         @endforeach
     
 
-    <div class="d-flex justify-content-end m-5">
-        {!! $posteos->links() !!}
+        <div class="container">
+            <div class="d-flex justify-content-end m-5">
+                {!! $posteos->links() !!}
+            </div>
+        </div>
     </div>
    
 </body>

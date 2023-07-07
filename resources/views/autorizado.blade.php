@@ -10,6 +10,5 @@
 </head>
 <body>
     @include('common/nav')
-    <H1>TA TODO PIOLIN</H1>
 </body>
 </html>

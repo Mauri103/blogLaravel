@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutenticacionController;
+use App\Http\Middleware\Autenticacion;
+
 
 
 /*
@@ -29,10 +31,12 @@ Route::get('/registrarse', function () {
 
 Route::get('/autorizado', function () {
     return view('autorizado');
-});
+})-> middleware(Autenticacion::class);
+
 
 
 
 Route::post("/registrarse",[AutenticacionController::class,"Registrar"]);
 Route::post("/login",[AutenticacionController::class,"Autenticar"]);
+Route::get("/logout",[AutenticacionController::class,"Logout"])-> middleware(Autenticacion::class);
 

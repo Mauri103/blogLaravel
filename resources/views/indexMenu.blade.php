@@ -10,6 +10,5 @@
 </head>
 <body>
     @include('common/nav')
-
 </body>
 </html>

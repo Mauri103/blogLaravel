@@ -15,8 +15,13 @@
                     <a href="/"><button class="btn btn-outline-success me-2" type="button">Inicio</button></a>
                 </div>
                 <div>
-                    <a href="/login"><button class="btn btn-outline-success me-2" type="button">Login</button></a>
-                    <a href="/registrarse"><button class="btn btn-outline-success me-2" type="button">Registrarse</button></a>
+                    @if(!Auth::check())
+                        <a href="/login"><button class="btn btn-outline-success me-2" type="button">Login</button></a>
+                        <a href="/registrarse"><button class="btn btn-outline-success me-2" type="button">Registrarse</button></a>
+                    @endif
+                    @if(Auth::check())
+                        <a href="/logout"><button class="btn btn-outline-success me-2" type="button">Cerrar sesión</button></a>
+                    @endif
                 </div>
             </form>
         </nav>

@@ -20,14 +20,23 @@
             <button type="submit" class="btn btn-outline-success me-2" >Postear</button>
         </form>
     </div>
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-lg-4">
-                @foreach ($posteos as $posteo)
-                    <h1>{{$posteo->posteo}}</h1>
-                @endforeach
+        <div class="container mt-4">
+            <h4>Posteos recientes</h4>
+        </div>
+        @foreach ($posteos as $posteo)
+        <div class="d-flex justify-content-center mt-4">
+            <div class="container m-2 card ">
+                <div class="card-body">
+                    {{$posteo->posteo}}
+                </div>
             </div>
         </div>
+        @endforeach
+    
+
+    <div class="d-flex justify-content-end m-5">
+        {!! $posteos->links() !!}
     </div>
+   
 </body>
 </html>

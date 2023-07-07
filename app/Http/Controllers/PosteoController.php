@@ -22,12 +22,12 @@ class PosteoController extends Controller
     }
 
     public function Home(Request $request){ 
-        $posteos = Posteo::all(); 
+        $posteos = Posteo::paginate(3);
         return view("/indexMenu",["posteos" => $posteos]);
     }
 
     public function Autenticado(Request $request){
-        $posteos = Posteo::all(); 
+        $posteos = Posteo::paginate(3);
         return view("/inicio",["posteos" => $posteos]);
     }
 

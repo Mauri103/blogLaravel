@@ -10,5 +10,15 @@
 </head>
 <body>
     @include('common/nav')
+    <div class="container">    
+        <form action="/posteo" method="post">
+            @csrf
+            <div class="mb-3">
+                <label for="" class="form-label">Postear algo...</label>
+                <input type="text" class="form-control" name="posteo" id="" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-outline-success me-2" >Postear</button>
+        </form>
+    </div>
 </body>
 </html>

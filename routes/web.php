@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutenticacionController;
+use App\Http\Controllers\PosteoController;
 use App\Http\Middleware\Autenticacion;
 
 
@@ -33,10 +34,12 @@ Route::get('/autorizado', function () {
     return view('autorizado');
 })-> middleware(Autenticacion::class);
 
+Route::get('/listar',[PosteoController::class,"Listar"]);
 
 
 
 Route::post("/registrarse",[AutenticacionController::class,"Registrar"]);
 Route::post("/login",[AutenticacionController::class,"Autenticar"]);
 Route::get("/logout",[AutenticacionController::class,"Logout"])-> middleware(Autenticacion::class);
+Route::post("/posteo",[PosteoController::class,"AgregarPosteo"])-> middleware(Autenticacion::class);
 
